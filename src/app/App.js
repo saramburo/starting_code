@@ -15,6 +15,8 @@ import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
+  Link,
+  NavLink,
 } from "react-router-dom";
 import "./App.css";
 
@@ -24,6 +26,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root />}>
       <Route path="about" element={<About />} />
       <Route path="articles" element={<Articles />} />
+      <Route path="articles/:title" element={<Article />} />
+      <Route path="authors/:name" element={<Author />} />
       <Route path="categories" element={<Categories />} />
       <Route path="sign-up" element={<SignUp />} />
       <Route path="profile" element={<Profile />} />
